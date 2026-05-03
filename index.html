@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioMate — DP Biology IA Resources</title>
+<meta name="description" content="DP Biology Internal Assessment resources written by an IB Biology teacher and moderator with 23 years of experience. Moderation-level standards for students and teachers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://gumroad.com/js/gumroad.js"></script>
+<style>
+  :root {
+    --navy: #0d2240;
+    --navy-mid: #0f2d52;
+    --blue: #0077b6;
+    --blue-light: #60b4f0;
+    --pastel-1: #e0eff9;
+    --pastel-2: #cde3f2;
+    --pastel-3: #b8d8ee;
+    --pastel-4: #deeef9;
+    --pastel-5: #e8f4fb;
+    --white: #ffffff;
+    --text-dark: #0d2240;
+    --text-mid: #3a6a8a;
+    --text-light: #4a7a9a;
+    --card-border: #cde3f2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f0f6fb;
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    padding: 0 48px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .nav-logo {
+    width: 38px;
+    height: 38px;
+    background: var(--blue);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .nav-logo svg {
+    width: 21px;
+    height: 21px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .nav-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-right a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  .nav-right a:hover { color: var(--blue-light); }
+
+  .nav-cta {
+    background: var(--blue) !important;
+    color: #fff !important;
+    padding: 8px 20px !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    padding: 96px 48px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,119,182,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(144,202,249,0.12);
+    border: 1px solid rgba(144,202,249,0.25);
+    color: #90caf9;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 em {
+    color: var(--blue-light);
+    font-style: italic;
+  }
+
+  .hero p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.7);
+    max-width: 500px;
+    margin: 0 auto 44px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--blue);
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 2px solid var(--blue);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover {
+    background: #005f8e;
+    border-color: #005f8e;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-block;
+    background: transparent;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(255,255,255,0.9);
+    transform: translateY(-1px);
+  }
+
+  /* STATS BAR */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--pastel-1);
+    border-bottom: 1px solid var(--pastel-3);
+  }
+
+  .stat {
+    padding: 36px 24px;
+    text-align: center;
+    border-right: 1px solid var(--pastel-3);
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--text-mid);
+    font-weight: 400;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 72px 48px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    line-height: 1.2;
+  }
+
+  .section p.lead {
+    color: var(--text-mid);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 640px;
+    font-weight: 300;
+  }
+
+  /* RESOURCE CARDS */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 32px rgba(0,119,182,0.1);
+    transform: translateY(-2px);
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--pastel-4);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+    flex: 1;
+    font-weight: 300;
+  }
+
+  .card-footer {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--pastel-2);
+  }
+
+  .card-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+
+  .card-btn {
+    display: block;
+    background: var(--blue);
+    color: #ffffff;
+    text-align: center;
+    padding: 11px 16px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .card-btn:hover { background: #005f8e; color: #ffffff; }
+
+  /* DIVIDER */
+  hr { border: none; border-top: 1px solid var(--pastel-2); }
+
+  /* APPS SECTION */
+  .apps-section {
+    background: var(--pastel-5);
+    padding: 72px 48px;
+    border-top: 1px solid var(--pastel-2);
+    border-bottom: 1px solid var(--pastel-2);
+  }
+
+  .apps-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .app-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .app-card {
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 28px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+  }
+
+  .app-card:hover { box-shadow: 0 8px 32px rgba(0,119,182,0.08); }
+
+  .app-card-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--navy);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .app-card-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .app-card-body h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  .app-card-body p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .app-badge {
+    display: inline-block;
+    background: var(--pastel-4);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 12px;
+    letter-spacing: 0.03em;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 72px 48px;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+
+  .about p {
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    padding: 36px 48px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  footer p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  footer a {
+    color: var(--blue-light);
+    text-decoration: none;
+  }
+
+  footer a:hover { color: #fff; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .hero { padding: 64px 24px 56px; }
+    .hero h1 { font-size: 36px; }
+    .stats { grid-template-columns: 1fr; }
+    .stat { border-right: none; border-bottom: 1px solid var(--pastel-3); }
+    .section { padding: 48px 24px; }
+    .cards { grid-template-columns: 1fr; }
+    .app-cards { grid-template-columns: 1fr; }
+    .apps-section { padding: 48px 24px; }
+    .about { padding: 48px 24px; }
+    footer { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
+  </div>
+  <span class="nav-brand">BioMate</span>
+  <div class="nav-right">
+    <a href="#resources">Resources</a>
+    <a href="#platform">Platform</a>
+    <a href="#about">About</a>
+    <a href="https://biomate.gumroad.com" class="nav-cta">Browse Store</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-badge">DP Biology Internal Assessment</div>
+  <h1>Stop losing marks you <em>didn't know</em> you were losing.</h1>
+  <p>Written by an IB Biology teacher and moderator with 23 years of experience. Moderation-level standards. Built for students and teachers who want marks that stick.</p>
+  <div class="hero-btns">
+    <a href="#resources" class="btn-primary" style="color:#ffffff;text-decoration:none">Browse Resources</a>
+    <a href="#about" class="btn-ghost" style="color:#ffffff;text-decoration:none">About BioMate</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">23</div>
+    <div class="stat-label">Years IB experience</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">4</div>
+    <div class="stat-label">IA criteria covered</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">3</div>
+    <div class="stat-label">Resources available now</div>
+  </div>
+</div>
+
+<!-- RESOURCES -->
+<div class="section" id="resources">
+  <div class="section-label">Resources</div>
+  <h2>Everything you need for your IA</h2>
+  <p class="lead">Three resources designed to work together — or independently. Each one targets a different stage of the IA process.</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">📘</div>
+      <h3>Complete Student Guide</h3>
+      <p>All four criteria covered with worked examples, strong vs weak comparisons, criterion-by-criterion checklists, and the exact p-value wording that earns marks at moderation level.</p>
+      <div class="card-footer">
+        <div class="card-price">$9.99</div>
+        <a class="card-btn gumroad-button" href="https://biomate.gumroad.com/l/student-guide?wanted=true" style="color:#ffffff;text-decoration:none">Get the guide →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📗</div>
+      <h3>Teacher Marking Guide</h3>
+      <p>Moderation-level score anchors, the DA hard cap rules, commonly over-awarded scores by criterion, moderator red flags, and ready-to-paste ManageBac comment templates for every score band.</p>
+      <div class="card-footer">
+        <div class="card-price">$19.99</div>
+        <a class="card-btn gumroad-button" href="https://biomate.gumroad.com/l/teacher-marking-guide?wanted=true" style="color:#ffffff;text-decoration:none">Get the guide →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📋</div>
+      <h3>IA Planning Template</h3>
+      <p>A structured, editable, IB-submittable framework that guides students through every section — from research question to works cited — with built-in hints and a pre-submission checklist.</p>
+      <div class="card-footer">
+        <div class="card-price">$4.99</div>
+        <a class="card-btn gumroad-button" href="https://biomate.gumroad.com/l/ia-planning-template?wanted=true" style="color:#ffffff;text-decoration:none">Get the template →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr>
+
+<!-- PLATFORM / APPS -->
+<div class="apps-section" id="platform">
+  <div class="apps-inner">
+    <div class="section-label">Coming Soon</div>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:34px;font-weight:400;margin-bottom:10px;color:#0d2240;line-height:1.2">The BioMate Platform</h2>
+    <p class="lead" style="color:#3a6a8a;font-size:16px;line-height:1.8;margin-bottom:40px;max-width:640px;font-weight:300">Beyond the PDF resources, BioMate is building a suite of digital tools for DP Biology students and teachers. Currently in pilot at the British School Jakarta.</p>
+
+    <div class="app-cards">
+
+      <div class="app-card">
+        <div class="app-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
+        </div>
+        <div class="app-card-body">
+          <h3>IA Workspace</h3>
+          <p>A cloud-based platform where students plan and write their IA section by section, with real-time AI feedback on every criterion as they go. Teachers monitor progress in real time and export ManageBac-ready reports at the click of a button.</p>
+          <span class="app-badge">Pilot — BSJ Jakarta</span>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="app-card-body">
+          <h3>AI Grading Tool</h3>
+          <p>Upload a student IA and receive moderation-level feedback across all four criteria instantly — flagging exactly where marks are being lost and why, with ManageBac-ready comments generated automatically.</p>
+          <span class="app-badge">Pilot — BSJ Jakarta</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about" id="about">
+  <div class="section-label" style="text-align:center">About BioMate</div>
+  <h2>Built from 23 years inside the IB classroom</h2>
+  <p>BioMate resources are written by an experienced IB Biology teacher and moderator who has marked, moderated, and standardised Internal Assessments for over two decades. These aren't generic study guides — they reflect exactly what examiners look for at moderation level, and exactly where students lose marks they didn't know they were losing.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© BioMate 2026 &nbsp;·&nbsp; <a href="mailto:biomate.hello@gmail.com">biomate.hello@gmail.com</a> &nbsp;·&nbsp; <a href="https://www.biomate.education">biomate.education</a></p>
+</footer>
+
+</body>
+</html>
