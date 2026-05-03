@@ -28,11 +28,7 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html {
-    scroll-behavior: smooth;
-    width: 100%;
-    overflow-x: hidden;
-  }
+  html { scroll-behavior: smooth; width: 100%; overflow-x: hidden; }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -55,6 +51,8 @@
     top: 0;
     z-index: 100;
     border-bottom: 1px solid rgba(255,255,255,0.07);
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .nav-logo {
@@ -119,6 +117,8 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .hero::before {
@@ -225,6 +225,8 @@
     grid-template-columns: repeat(3, 1fr);
     background: var(--pastel-1);
     border-bottom: 1px solid var(--pastel-3);
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .stat {
@@ -251,7 +253,8 @@
 
   /* SECTIONS */
   .section {
-    padding: 48px 48px;
+    padding: 48px;
+    width: 100%;
     max-width: 960px;
     margin: 0 auto;
   }
