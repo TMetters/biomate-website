@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-<script src="https://gumroad.com/js/gumroad.js"></script>
 <style>
   :root {
     --navy: #0d2240;
@@ -29,13 +28,19 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+  }
 
   body {
     font-family: 'DM Sans', sans-serif;
     background: #f0f6fb;
     color: var(--text-dark);
     line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   /* NAV */
@@ -110,7 +115,7 @@
   /* HERO */
   .hero {
     background: var(--navy);
-    padding: 96px 48px 80px;
+    padding: 60px 48px 52px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -246,7 +251,7 @@
 
   /* SECTIONS */
   .section {
-    padding: 72px 48px;
+    padding: 48px 48px;
     max-width: 960px;
     margin: 0 auto;
   }
@@ -283,13 +288,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    align-items: stretch;
   }
 
   .card {
     background: #fff;
     border: 1px solid var(--card-border);
     border-radius: 14px;
-    padding: 28px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     transition: box-shadow 0.2s, transform 0.2s;
@@ -365,7 +371,7 @@
   /* APPS SECTION */
   .apps-section {
     background: var(--pastel-5);
-    padding: 72px 48px;
+    padding: 48px 48px;
     border-top: 1px solid var(--pastel-2);
     border-bottom: 1px solid var(--pastel-2);
   }
@@ -443,7 +449,7 @@
 
   /* ABOUT */
   .about {
-    padding: 72px 48px;
+    padding: 48px 48px;
     max-width: 720px;
     margin: 0 auto;
     text-align: center;
@@ -558,7 +564,7 @@
       <p>All four criteria covered with worked examples, strong vs weak comparisons, criterion-by-criterion checklists, and the exact p-value wording that earns marks at moderation level.</p>
       <div class="card-footer">
         <div class="card-price">$9.99</div>
-        <a class="card-btn gumroad-button" href="https://biomate.gumroad.com/l/student-guide?wanted=true" style="color:#ffffff;text-decoration:none">Get the guide →</a>
+        <a class="card-btn" href="https://biomate.gumroad.com/l/student-guide?wanted=true" style="color:#ffffff;text-decoration:none">Get the guide →</a>
       </div>
     </div>
 
@@ -568,7 +574,7 @@
       <p>Moderation-level score anchors, the DA hard cap rules, commonly over-awarded scores by criterion, moderator red flags, and ready-to-paste ManageBac comment templates for every score band.</p>
       <div class="card-footer">
         <div class="card-price">$19.99</div>
-        <a class="card-btn gumroad-button" href="https://biomate.gumroad.com/l/teacher-marking-guide?wanted=true" style="color:#ffffff;text-decoration:none">Get the guide →</a>
+        <a class="card-btn" href="https://biomate.gumroad.com/l/teacher-marking-guide?wanted=true" style="color:#ffffff;text-decoration:none">Get the guide →</a>
       </div>
     </div>
 
@@ -578,7 +584,7 @@
       <p>A structured, editable, IB-submittable framework that guides students through every section — from research question to works cited — with built-in hints and a pre-submission checklist.</p>
       <div class="card-footer">
         <div class="card-price">$4.99</div>
-        <a class="card-btn gumroad-button" href="https://biomate.gumroad.com/l/ia-planning-template?wanted=true" style="color:#ffffff;text-decoration:none">Get the template →</a>
+        <a class="card-btn" href="https://biomate.gumroad.com/l/ia-planning-template?wanted=true" style="color:#ffffff;text-decoration:none">Get the template →</a>
       </div>
     </div>
 
