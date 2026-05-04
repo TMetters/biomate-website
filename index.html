@@ -28,16 +28,13 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; width: 100%; overflow-x: hidden; }
+  html { scroll-behavior: smooth; }
 
   body {
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
     background: #f0f6fb;
     color: var(--text-dark);
     line-height: 1.6;
-    width: 100%;
-    overflow-x: hidden;
   }
 
   /* NAV */
@@ -52,8 +49,6 @@
     top: 0;
     z-index: 100;
     border-bottom: 1px solid rgba(255,255,255,0.07);
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .nav-logo {
@@ -118,8 +113,6 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .hero::before {
@@ -150,7 +143,7 @@
 
   .hero h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: 64px;
+    font-size: 52px;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -226,8 +219,6 @@
     grid-template-columns: repeat(3, 1fr);
     background: var(--pastel-1);
     border-bottom: 1px solid var(--pastel-3);
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .stat {
@@ -240,7 +231,7 @@
 
   .stat-num {
     font-family: 'DM Serif Display', serif;
-    font-size: 48px;
+    font-size: 40px;
     color: var(--blue);
     line-height: 1;
     margin-bottom: 6px;
@@ -254,9 +245,8 @@
 
   /* SECTIONS */
   .section {
-    padding: 48px;
-    width: 100%;
-    max-width: 1200px;
+    padding: 48px 48px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
@@ -271,7 +261,7 @@
 
   .section h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: 40px;
+    font-size: 34px;
     font-weight: 400;
     margin-bottom: 10px;
     color: var(--text-dark);
@@ -381,7 +371,7 @@
   }
 
   .apps-inner {
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
@@ -454,7 +444,7 @@
   /* ABOUT */
   .about {
     padding: 48px 48px;
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
     text-align: center;
   }
@@ -513,7 +503,7 @@
 </head>
 <body>
 
-<!-- NAV -->  
+<!-- NAV -->
 <nav>
   <div class="nav-logo">
     <svg viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
