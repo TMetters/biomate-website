@@ -999,6 +999,28 @@
     background-repeat: repeat;
   }
 
+  .app-card-pricing {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 10px;
+    font-weight: 300;
+  }
+
+  .app-card-btn {
+    display: inline-block;
+    margin-top: 14px;
+    background: var(--blue);
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .app-card-btn:hover { background: var(--blue-dark); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .lightbox-box { width: 96vw; height: 82vh; }
@@ -1336,9 +1358,9 @@
 <!-- PLATFORM -->
 <div class="apps-section" id="platform">
   <div class="apps-inner">
-    <span class="section-label">Coming Soon</span>
+    <span class="section-label">Live Now</span>
     <h2 style="font-family:'Fraunces',serif;font-size:38px;font-weight:400;color:var(--text-dark);margin-bottom:8px;line-height:1.2">The BioMate Platform</h2>
-    <p style="color:var(--text-mid);font-size:15px;line-height:1.8;margin-bottom:40px;max-width:640px;font-weight:300">Beyond the PDF resources, BioMate is building a suite of digital tools for DP Biology students and teachers. Currently in pilot at the British School Jakarta.</p>
+    <p style="color:var(--text-mid);font-size:15px;line-height:1.8;margin-bottom:40px;max-width:640px;font-weight:300">Beyond the PDF resources, BioMate offers two digital tools for DP Biology students and teachers — live and available to anyone worldwide.</p>
     <div class="app-cards">
       <div class="app-card">
         <div class="app-card-icon">
@@ -1347,7 +1369,9 @@
         <div class="app-card-body">
           <h3>IA Workspace</h3>
           <p>A cloud-based platform where students plan and write their IA section by section, with real-time AI feedback on every criterion as they go. Teachers monitor progress in real time, run AI grading reports, and export ManageBac-ready comments at the click of a button.</p>
-          <span class="app-badge"><span class="pulse-dot"></span>Pilot — BSJ Jakarta</span>
+          <span class="app-badge"><span class="pulse-dot"></span>Live — Open to all</span>
+          <p class="app-card-pricing">£9.99 / month &nbsp;·&nbsp; or £24.99 lifetime</p>
+          <a href="https://ibdp-bio-ia-grader.vercel.app" class="app-card-btn" style="color:#ffffff;text-decoration:none">Get started →</a>
         </div>
       </div>
       <div class="app-card">
@@ -1357,7 +1381,9 @@
         <div class="app-card-body">
           <h3>AI Grading Tool</h3>
           <p>Upload a student IA and receive moderation-level feedback across all four criteria instantly — flagging exactly where marks are being lost and why, with ManageBac-ready comments generated automatically. Designed for teachers who want to standardise their marking before submission.</p>
-          <span class="app-badge"><span class="pulse-dot"></span>Pilot — BSJ Jakarta</span>
+          <span class="app-badge"><span class="pulse-dot"></span>Live</span>
+          <p class="app-card-pricing">£49.99 / year</p>
+          <a href="https://biomate-app.vercel.app" class="app-card-btn" style="color:#ffffff;text-decoration:none">Get started →</a>
         </div>
       </div>
     </div>
