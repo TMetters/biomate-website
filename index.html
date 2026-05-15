@@ -7,6 +7,7 @@
 <meta name="description" content="DP Biology Internal Assessment resources written by an IB Biology teacher and moderator with 23 years of experience. Moderation-level standards for students and teachers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -154,10 +155,11 @@
 
   .hero h1 {
     font-family: 'Fraunces', serif;
-    font-size: 64px;
+    font-size: 70px;
     font-weight: 400;
-    line-height: 1.05;
-    margin-bottom: 18px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
     color: #ffffff;
     max-width: 760px;
     margin-left: auto;
@@ -244,11 +246,12 @@
   .btn-ghost:hover { border-color: rgba(255,255,255,0.85); transform: translateY(-1px); }
 
   /* ── WHY ── */
-  .why { background: #fff; padding: 56px 64px; width: 100%; }
+  .why { background: #fff; padding: 88px 0; width: 100%; }
 
   .why-inner {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 64px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -262,7 +265,8 @@
     font-size: 38px;
     font-weight: 400;
     color: var(--text-dark);
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin-bottom: 18px;
   }
 
@@ -270,7 +274,7 @@
     font-size: 15px;
     color: var(--text-mid);
     line-height: 1.75;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-weight: 300;
   }
 
@@ -282,19 +286,19 @@
     align-items: flex-start;
     background: var(--pastel-5);
     border: 1px solid var(--pastel-2);
+    border-left: 3px solid var(--blue);
     border-radius: 10px;
-    padding: 18px 20px;
+    padding: 14px 16px;
   }
 
   .why-point.da-cap { border-left: 3px solid #cc0011; }
-  .why-point-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
   .why-point h3 { font-size: 15px; font-weight: 600; color: var(--text-dark); margin-bottom: 3px; }
   .why-point p { font-size: 13px; color: var(--text-light); line-height: 1.65; margin: 0; }
 
   /* ── SECTION BASE ── */
   .section {
-    padding: 56px 64px;
-    max-width: 1200px;
+    padding: 88px 64px;
+    max-width: 1280px;
     margin: 0 auto;
     width: 100%;
   }
@@ -315,7 +319,8 @@
     font-weight: 400;
     margin-bottom: 8px;
     color: var(--text-dark);
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   .section p.lead {
@@ -330,13 +335,14 @@
   /* ── FEATURE DARK SECTION ── */
   .feature-dark {
     background: #0f1117;
-    padding: 80px 64px;
+    padding: 96px 0;
     width: 100%;
   }
 
   .feature-dark-inner {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 64px;
   }
 
   .feature-eyebrow {
@@ -357,7 +363,8 @@
     color: #fff;
     text-align: center;
     line-height: 1.1;
-    margin-bottom: 64px;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
   }
 
   .feature-headline em { color: var(--blue-light); font-style: italic; }
@@ -374,7 +381,7 @@
     background: #1a1f2e;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 14px;
-    padding: 24px;
+    padding: 18px;
     box-shadow: 0 24px 64px rgba(0,0,0,0.5);
   }
 
@@ -535,7 +542,7 @@
   }
 
   .feature-item {
-    padding: 22px 0;
+    padding: 16px 0;
     border-bottom: 1px solid rgba(255,255,255,0.07);
   }
 
@@ -567,7 +574,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     overflow: hidden;
     position: relative;
   }
@@ -577,20 +584,26 @@
     box-shadow: 0 4px 20px rgba(0,153,214,0.12);
   }
 
-  .card:hover { box-shadow: 0 8px 32px rgba(0,153,214,0.1); transform: translateY(-2px); }
-  .card.card-featured:hover { box-shadow: 0 12px 40px rgba(0,153,214,0.18); }
+  .card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.2); transform: translateY(-2px); }
+  .card.card-featured:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
 
-  .card-cover {
-    width: 100%;
-    height: 200px;
-    display: block;
-    object-fit: cover;
-    object-position: 0 0;
+  .card-cover-wrap {
+    overflow: hidden;
+    flex-shrink: 0;
     border-bottom: 1px solid var(--card-border);
   }
 
+  .card-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .card-cover { transform: scale(1.08); }
+
   .card-body {
-    padding: 20px 22px 0;
+    padding: 16px 18px 0;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -637,7 +650,7 @@
     margin-top: 5px;
   }
 
-  .card-footer { margin-top: 16px; padding: 14px 22px 20px; border-top: 1px solid var(--pastel-2); }
+  .card-footer { margin-top: 12px; padding: 12px 18px 16px; border-top: 1px solid var(--pastel-2); }
   .card-price { font-family: 'Fraunces', serif; font-size: 26px; color: var(--blue); margin-bottom: 12px; }
 
   .card-btn {
@@ -656,8 +669,8 @@
   .card-btn:hover { background: var(--blue-dark); color: #ffffff; }
 
   /* ── TESTIMONIALS ── */
-  .testimonial-section { background: var(--navy); padding: 56px 64px; width: 100%; }
-  .testimonial-inner { max-width: 1200px; margin: 0 auto; }
+  .testimonial-section { background: var(--navy); padding: 88px 0; width: 100%; }
+  .testimonial-inner { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
   .testimonial-section .section-label { color: #90caf9; }
 
   .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -666,7 +679,7 @@
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.09);
     border-radius: 12px;
-    padding: 24px;
+    padding: 18px;
   }
 
   .testimonial-quote-mark {
@@ -709,20 +722,20 @@
   /* ── FAQ ── */
   .faq-section {
     background: var(--off-white);
-    padding: 56px 64px;
+    padding: 88px 0;
     border-top: 1px solid #e8e6e1;
     border-bottom: 1px solid #e8e6e1;
     width: 100%;
   }
 
-  .faq-inner { max-width: 1200px; margin: 0 auto; }
+  .faq-inner { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
   .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
 
   .faq-item {
     background: #fff;
     border: 1px solid var(--card-border);
     border-radius: 10px;
-    padding: 20px 24px;
+    padding: 16px 20px;
   }
 
   .faq-item h3 {
@@ -754,8 +767,8 @@
   .faq-item p { font-size: 13px; color: var(--text-light); line-height: 1.7; padding-left: 30px; font-weight: 300; }
 
   /* ── PLATFORM ── */
-  .apps-section { background: #fff; padding: 56px 64px; width: 100%; }
-  .apps-inner { max-width: 1200px; margin: 0 auto; }
+  .apps-section { background: #fff; padding: 88px 0; width: 100%; }
+  .apps-inner { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
   .app-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
   .app-card {
@@ -816,18 +829,19 @@
   }
 
   /* ── ABOUT ── */
-  .about { background: #fff; padding: 56px 64px; width: 100%; border-top: 1px solid #e8e6e1; }
+  .about { background: #fff; padding: 88px 0; width: 100%; border-top: 1px solid #e8e6e1; }
 
   .about-inner {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 64px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
   }
 
-  .about h2 { font-family: 'Fraunces', serif; font-size: 38px; font-weight: 400; color: var(--text-dark); margin-bottom: 18px; line-height: 1.2; }
+  .about h2 { font-family: 'Fraunces', serif; font-size: 38px; font-weight: 400; color: var(--text-dark); margin-bottom: 18px; line-height: 1.1; letter-spacing: -0.02em; }
   .about p { font-size: 14px; color: var(--text-mid); line-height: 1.75; margin-bottom: 10px; font-weight: 300; }
 
   .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -837,8 +851,8 @@
   .about-stat-label { font-size: 12px; color: var(--text-mid); }
 
   /* ── CTA BANNER ── */
-  .cta-banner { background: var(--blue); padding: 56px 64px; text-align: center; width: 100%; }
-  .cta-banner h2 { font-family: 'Fraunces', serif; font-size: 38px; font-weight: 400; color: #fff; margin-bottom: 14px; line-height: 1.2; }
+  .cta-banner { background: var(--blue); padding: 88px 0; text-align: center; width: 100%; }
+  .cta-banner h2 { font-family: 'Fraunces', serif; font-size: 38px; font-weight: 400; color: #fff; margin-bottom: 14px; line-height: 1.1; letter-spacing: -0.02em; }
   .cta-banner p { font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 32px; font-weight: 300; }
 
   .btn-white {
@@ -1036,21 +1050,25 @@
     .hero-stats { flex-direction: column; }
     .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .hero-stat:last-child { border-bottom: none; }
-    .why { padding: 44px 20px; }
-    .why-inner { grid-template-columns: 1fr; gap: 36px; }
+    .why { padding: 44px 0; }
+    .why-inner { grid-template-columns: 1fr; gap: 36px; padding: 0 20px; }
     .section { padding: 44px 20px; }
     .cards { grid-template-columns: 1fr; }
-    .feature-dark { padding: 56px 20px; }
+    .feature-dark { padding: 56px 0; }
+    .feature-dark-inner { padding: 0 20px; }
     .feature-headline { font-size: 36px; margin-bottom: 40px; }
     .feature-cols { grid-template-columns: 1fr; gap: 40px; }
     .testimonials { grid-template-columns: 1fr; }
-    .testimonial-section { padding: 44px 20px; }
-    .faq-section { padding: 44px 20px; }
+    .testimonial-section { padding: 44px 0; }
+    .testimonial-inner { padding: 0 20px; }
+    .faq-section { padding: 44px 0; }
+    .faq-inner { padding: 0 20px; }
     .faq-grid { grid-template-columns: 1fr; }
-    .apps-section { padding: 44px 20px; }
+    .apps-section { padding: 44px 0; }
+    .apps-inner { padding: 0 20px; }
     .app-cards { grid-template-columns: 1fr; }
-    .about { padding: 44px 20px; }
-    .about-inner { grid-template-columns: 1fr; gap: 36px; }
+    .about { padding: 44px 0; }
+    .about-inner { grid-template-columns: 1fr; gap: 36px; padding: 0 20px; }
     .cta-banner { padding: 44px 20px; }
     .cta-banner h2 { font-size: 28px; }
     footer { padding: 28px 20px; }
@@ -1112,14 +1130,12 @@
     </div>
     <div class="why-points">
       <div class="why-point">
-        <div class="why-point-icon">🎯</div>
         <div>
           <h3>Written to moderation standards</h3>
           <p>Not a summary of the IB rubric. Written by someone who has marked, moderated, and standardised IAs at the highest level.</p>
         </div>
       </div>
       <div class="why-point da-cap">
-        <div class="why-point-icon">📊</div>
         <div>
           <h3>The DA cap that costs students most</h3>
           <p>Data Analysis cannot exceed 4/6 without inferential statistics and a correctly interpreted p-value. Most students don't know this. BioMate tells them exactly.</p>
@@ -1223,7 +1239,9 @@
   <div class="cards">
 
     <div class="card card-featured">
-      <img src="cover-student.png" alt="Complete Student Guide cover" class="card-cover">
+      <div class="card-cover-wrap">
+        <img src="cover-student.webp" alt="Complete Student Guide cover" class="card-cover">
+      </div>
       <div class="popular-badge">Most popular</div>
       <div class="card-body">
         <h3>Complete Student Guide</h3>
@@ -1245,7 +1263,9 @@
     </div>
 
     <div class="card">
-      <img src="cover-teacher.png" alt="Teacher Marking Guide cover" class="card-cover">
+      <div class="card-cover-wrap">
+        <img src="cover-teacher.webp" alt="Teacher Marking Guide cover" class="card-cover">
+      </div>
       <div class="card-body">
         <h3>Teacher Marking Guide</h3>
         <p>Moderation-level marking standards for all four criteria — written for teachers who want their marks to survive IB moderation.</p>
@@ -1266,7 +1286,9 @@
     </div>
 
     <div class="card">
-      <img src="cover-template.png" alt="IA Planning Template cover" class="card-cover">
+      <div class="card-cover-wrap">
+        <img src="cover-template.webp" alt="IA Planning Template cover" class="card-cover">
+      </div>
       <div class="card-body">
         <h3>IA Planning Template</h3>
         <p>A structured, editable, IB-submittable framework that guides students through every section before they write a single word of their report.</p>
@@ -1294,7 +1316,7 @@
 <div class="testimonial-section">
   <div class="testimonial-inner">
     <span class="section-label">From the classroom</span>
-    <h2 style="font-family:'Fraunces',serif;font-size:38px;font-weight:400;color:#fff;margin-bottom:40px;line-height:1.2">What students and teachers are saying</h2>
+    <h2 style="font-family:'Fraunces',serif;font-size:38px;font-weight:400;color:#fff;margin-bottom:40px;line-height:1.1;letter-spacing:-0.02em">What students and teachers are saying</h2>
     <div class="testimonials">
       <div class="testimonial">
         <span class="testimonial-quote-mark">"</span>
@@ -1337,11 +1359,11 @@
 <div class="faq-section" id="faq">
   <div class="faq-inner">
     <span class="section-label">FAQ</span>
-    <h2 style="font-family:'Fraunces',serif;font-size:38px;font-weight:400;color:var(--text-dark);line-height:1.2">Common questions</h2>
+    <h2 style="font-family:'Fraunces',serif;font-size:38px;font-weight:400;color:var(--text-dark);line-height:1.1;letter-spacing:-0.02em">Common questions</h2>
     <div class="faq-grid">
       <div class="faq-item">
         <h3>Is this for the new IB Biology syllabus?</h3>
-        <p>Yes. The resources are syllabus-agnostic — the IA criteria and marking standards have not changed between the old and new syllabus. Everything in BioMate applies to both.</p>
+        <p>Yes. The four IA criteria — Research Design, Data Analysis, Conclusion, and Evaluation — are unchanged in the new syllabus (first assessment May 2025), and BioMate's guidance is fully aligned. One thing worth noting: Conclusion and Evaluation now carry greater combined weight, making the guidance in BioMate on these sections more important than ever.</p>
       </div>
       <div class="faq-item">
         <h3>Does BioMate write the IA for me?</h3>
@@ -1359,7 +1381,7 @@
 <div class="apps-section" id="platform">
   <div class="apps-inner">
     <span class="section-label">Live Now</span>
-    <h2 style="font-family:'Fraunces',serif;font-size:38px;font-weight:400;color:var(--text-dark);margin-bottom:8px;line-height:1.2">The BioMate Platform</h2>
+    <h2 style="font-family:'Fraunces',serif;font-size:38px;font-weight:400;color:var(--text-dark);margin-bottom:8px;line-height:1.1;letter-spacing:-0.02em">The BioMate Platform</h2>
     <p style="color:var(--text-mid);font-size:15px;line-height:1.8;margin-bottom:40px;max-width:640px;font-weight:300">Beyond the PDF resources, BioMate offers two digital tools for DP Biology students and teachers — live and available to anyone worldwide.</p>
     <div class="app-cards">
       <div class="app-card">
